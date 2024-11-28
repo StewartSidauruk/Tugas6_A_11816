@@ -6,8 +6,7 @@ from PIL import Image
 
 # Load the pre-trained model
 # Sesuaikan dengan path model Anda (model terbaik yang disimpan dalam format .h5)
-model_path = 'model_mobilenet.h5'
-model = load_model(model_path)  # Muat model dari file
+model = 'model_mobilenet.h5'
 
 class_names = ['Matang', 'Mentah']
 
