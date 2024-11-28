@@ -6,7 +6,7 @@ from PIL import Image
 
 # Load the pre-trained model
 # Sesuaikan dengan path model Anda (model terbaik yang di dump dalam format .h5)
-model = load_model(r'D:\Download 4\Tugas6_A_11816\Tugas6_A_11816\model_mobilenet.h5')
+model = 'model_mobilenet.h5'
 class_names = ['Matang', 'Mentah']
 
 # Function to preprocess and classify image
@@ -66,13 +66,13 @@ if st.sidebar.button("Prediksi"):
                 label_color = primary_color if label == "Matang" else secondary_color
 
                 # Display prediction results
-                st.sidebar.write(f" ** Nama File :** {uploaded_file.name}")
+                st.sidebar.write(f"**Nama File :** {uploaded_file.name}")
                 st.sidebar.markdown(f"<h4 style='color: {label_color};'>Prediksi: {label}</h4>", unsafe_allow_html=True)
 
                 # Display confidence scores
-                st.sidebar.write(" ** Confidence :** ")
+                st.sidebar.write("**Confidence:**")
                 for i, class_name in enumerate(class_names):
-                    st.sidebar.write(f"- {class_name}: {confidence[i] * 100 :. 2f}%")
+                    st.sidebar.write(f"- {class_name}: {confidence[i] * 100 :.2f}%")
 
                 # Display custom progress bar
                 custom_progress_bar(confidence, primary_color, secondary_color)
