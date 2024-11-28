@@ -47,7 +47,7 @@ def custom_progress_bar(confidence, color1, color2):
     st.sidebar.markdown(progress_html, unsafe_allow_html=True)
 
 # Streamlit UI
-st.title("Prediksi Kematangan Buah Naga - XXXX")  # Ganti XXXX dengan 4 digit NPM terakhir Anda
+st.title("Prediksi Kematangan Buah Naga - 1816")  # Ganti XXXX dengan 4 digit NPM terakhir Anda
 
 # Upload multiple files in the main page
 uploaded_files = st.file_uploader(
